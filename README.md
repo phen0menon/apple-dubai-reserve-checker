@@ -54,7 +54,7 @@ You can use crontab to automate this script to run in background.
    ```
 3. Run `crontab -e` and enter the following (to enter the insert mode - press `I`):
    ```
-   */5 * * * * /path/to/apple-checker.sh
+   */5 * * * * /path/to/apple-checker.sh >> /path/to/logs/apple-checker.log
    ```
 4. To exit vi, press Escape, then press `:x` and enter.
 5. Run `crontab -l` to check if it worked
