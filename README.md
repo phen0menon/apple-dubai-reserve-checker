@@ -32,9 +32,11 @@ Python >= 3.8. You can download Python here: https://www.python.org/downloads/
 ### Configuring `.env` file
 
 1. Copy `.env.example` file contents
-2. Enter your telegram bot id and chat id where to post messages:
+2. Adjust the following variables:
     - `TELEGRAM_BOT_ID`: You can use [BotFather](https://t.me/BotFather) for creating a bot. Obtain created bot token. You can do that in the BotFather. The bot token usually have the following pattern: `181283218:BBFRF3r-2Q4fSofzv-wDOFXKX6UIsd_GTtl`
     - `TELEGRAM_CHAT_ID`: An ID of Chat to push messages. You can use this bot to get the identifier: https://t.me/GetChatID_IL_BOT
+    - `COUNTRY`: either `dubai` or `deutschland`
+3. OPTIONAL: for Deutschland region, you need to enter postal code and specific part name. To get part name, go to [apple store](https://www.apple.com/de/shop/buy-iphone/iphone-16-pro), inspect the page code, search for `window.PRODUCT_SELECTION_BOOTSTRAP` and find specific model part number.
 
 
 ### Automation
