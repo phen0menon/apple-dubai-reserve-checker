@@ -36,3 +36,25 @@ Python >= 3.8. You can download Python here: https://www.python.org/downloads/
     - `TELEGRAM_BOT_ID`: You can use [BotFather](https://t.me/BotFather) for creating a bot. Obtain created bot token. You can do that in the BotFather. The bot token usually have the following pattern: `181283218:BBFRF3r-2Q4fSofzv-wDOFXKX6UIsd_GTtl`
     - `TELEGRAM_CHAT_ID`: An ID of Chat to push messages. You can use this bot to get the identifier: https://t.me/GetChatID_IL_BOT
 
+
+### Automation
+
+You can use crontab to automate this script to run in background.
+
+1. Create a script .sh:
+   ```sh
+    #!/bin/bash
+    cd /path/to/application
+    source .venv/bin/activate
+    python3 main.py
+   ```
+2. Make this script executable:
+   ```
+   chmod +x test-script.sh
+   ```
+3. Run `crontab -e` and enter the following (to enter the insert mode - press `I`):
+   ```
+   */5 * * * * /path/to/apple-checker.sh >> /path/to/logs/apple-checker.log
+   ```
+4. To exit vi, press Escape, then press `:x` and enter.
+5. Run `crontab -l` to check if it worked
